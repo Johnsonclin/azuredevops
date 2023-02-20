@@ -1,6 +1,6 @@
 param storageAccountType string = 'Standard_LRS'
 param location string = resourceGroup().location
-var storageAccountName = 'storage-test'
+var storageAccountName = 'storage${uniqueString('123')}'
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   name: storageAccountName
   location: location
